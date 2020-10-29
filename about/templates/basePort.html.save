@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <!-- Google Font -->
+  <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Font Awesome -->
+
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  {% load static %}
+
+  <!-- Preloader -->
+  <link rel="stylesheet" type="text/css" href="{% static '/about/css/preloader.css' %}"> 
+
+  <!-- Icon Font-->
+  <link rel="stylesheet"  type="text/css" href="{% static '/about/css/style.css' %}">
+  <link rel="stylesheet"  type="text/css" href="{% static '/about/css/owl.carousel.css' %}">
+  <link rel="stylesheet"  type="text/css" href="{% static '/about/css/owl.theme.default.css' %}"> 
+  <!-- Animate CSS-->
+  <link rel="stylesheet" type="text/css" href="{% static '/about/css/animate.css' %}">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="{% static '/about/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/about/css/style.css' %}">
+
+  
+  <link rel="stylesheet" type="text/css" href="{% static '/about/css/responsive.css' %}">
+        <!--[if lt IE 9]>
+        <script src="js/lte-ie7.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  <title>About - Xirouchakis Alexandros |  Portfolio</title>
+  <meta name="description" content="Xirouchakis Alexandros Portofolio BTS">
+  
+  </head>
+  <body>
+                <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div> 
+    <header id="HOME" style="background-position: 50% -125px;">
+	<div class="section_overlay">
+	   <a href="/about" title="Home" class="type-white">Acceuil</a>
+      
+	   <nav class="navbar navbar-default navbar-fixed-top">
+	       <div class="container">
+                <div class="navbar-header">
+	           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	             <span class="sr-only">Toggle navigation</span>
+	             <span class="icon-bar"></span>
+	             <span class="icon-bar"></span>
+	             <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+	        </div>
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	             <ul class="nav navbar-nav navbar-right">
+	                <li><a href="E4.html" title="E4" class="type-white">Situations E4</a></li>
+                        <li><a href="E6.html" title="E6" class="type-white">Situations E6</a></li>
+                        <li><a href="VeilleTechno.html" title="VT" class="type-white">Veille Technologique</a></li>
+                        <li><a href="" Download title="Tableau Synthèse" class="type-white">Tableau de Synthèse</a></li>
+		     </ul>
+	                </div><!-- /.navbar-collapse -->
+	              </div><!-- /.container -->
+	            </nav>         
+     		</div>
+	  </nav>	
+          <a href="CV.html" title="CV" class="type-white">CV</a>
+          <a href="/blog" title="labos" class="type-white">Labos</a>
+	  <a href="https://github.com/alexxirou?tab=repositories" title="Git" class="type-white">Mes Projets sur Github</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+    <div class="container">
+	 {% block page_content %}{% endblock %}
+    </div>
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <p class="label type-white">Epreuves BTS</p>
+          <p><a href="/work" title="Work" class="heavy type-white">Vers les epreuves</a></p>
+        </div>
+        <div class="col-4">
+          <p class="label type-white">Jetez un oeil à mon CV</p>
+          <p><a href="/about" title="About" class="heavy type-white">Par rapport à moi</a></p>
+        </div>
+        <div class="col-4">
+          <p class="label type-white">Mes projets personnels</p>
+          <p><a href="/" title="Hello" class="heavy type-white">Mes labos techniques</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+	<!-- =========================
+     SCRIPTS 
+============================== -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
