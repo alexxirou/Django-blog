@@ -1,3 +1,4 @@
 # Django-blog
-Creating a basic blog app using django and icorporating some static html pages, images, and files into it.
+Django configuration for  a small site serving static and dynamic content. 
+Static files are handled by the same server using the middleware Whitenoise making it an ideal conifguration for small server setups. 
 
