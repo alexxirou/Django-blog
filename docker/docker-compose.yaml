@@ -1,0 +1,65 @@
+
+version: '3'
+
+services:
+  web:
+    image: nginx:1.19
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    volumes:
+      - /data/nginx/conf.d:/etc/nginx/conf.d
+      - /data/nginx/snippets:/etc/nginx/snippets
+      - ./etc/ssl/certs:/etc/ssl/certs
+      - ./etc/ssl/private:/etc/ssl/private
+      - /data/www:/var/www
+    depends_on:
+      - app
+      - alp
+    networks:
+      - front
+      
+  db:
+    image: mariadb:10.5 
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: django_blog
+    volumes:
+      - /data/db:/var/lib/mysql
+      - /data/www:/var/www
+    networks:
+      - front
+
+  app:
+    build: .
+    ports:
+      - 8088:8088
+    restart: always
+    env_file:
+      - ./env
+    volumes:
+      - /data/www/verbumsap.xyz:/var/www/verbumsap.xyz
+      - /data/www/django/django_blog/media:/var/www/django/django_blog/media
+      - /data/www/django/django_blog/blog:/var/www/django/django_blog/blog
+      - /data/www/django/django_blog/E4:/var/www/django/django_blog/E4
+      - /data/www/django/django_blog/E6:/var/www/django/django_blog/E6
+      - /data/www/django/django_blog/about:/var/www/django/django_blog/about
+      - /data/www/django/django_blog/veilletechno:/var/www/django/django_blog/veilletechno
+    depends_on:
+      - alp
+    networks:
+      - front
+    
+  alp:
+    image: alpine:3.13.5
+    volumes:
+        - /data/www:/data/www
+    command: sleep 100000
+    networks:
+      - front
+   
+networks:
+  front:
+    driver: bridge
